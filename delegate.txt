@@ -1,0 +1,17 @@
+
+public delegate void SimpleDelegate();
+
+public class Program
+{
+    public static void SimpleMethod()
+    {
+        Console.WriteLine("SimpleMethod was called!");
+    }
+
+    public static void Main()
+    {
+        SimpleDelegate simpleDelegate = new SimpleDelegate(SimpleMethod);
+        
+        simpleDelegate();
+    }
+}
